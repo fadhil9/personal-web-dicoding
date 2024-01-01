@@ -53,13 +53,29 @@
               recusandae cupiditate quidem aut esse fugit dolore.F.
             </p>
             <div class="tab-titles">
-                <p class="tab-links active-link">Skills</p>
-                <p class="tab-links">Experience</p>
-                <p class="tab-links">Education</p>
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
             </div>
-            <div class="tab-contents">
+            <div class="tab-contents active-tab" id="skills">
                 <ul>
-                    <li><span>UI?UX</span><br>Designing Web/App interfaces</li>
+                    <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                    <li><span>Web Development</span><br>Web App Development</li>
+                    <li><span>App Development</span><br>Building Android/ios</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2023-2023</span><br>freelance project PT.LALALA</li>
+                    <li><span>2023-2024</span><br>Project college Web App Development</li>
+                    <li><span>2019-2019</span><br>Internship mechanic PT.Mazda</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2024-2024</span><br>Revou Tech academy Scholarship by revou x Kemdikbud</li>
+                    <li><span>2023-2024</span><br>CampusCoder Scholarsip by Codepolitan X alibaba cloud</li>
+                    <li><span>2021-2025</span><br>Graduate college technic infromatics Universitas Indraprasta </li>
                 </ul>
             </div>
 
@@ -67,5 +83,19 @@
         </div>
       </div>
     </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname){
+        for(tablinks of tablinks){
+            tablinks.classList.remove("active-link");
+        }
+        for(tabcontents of tabcontents){
+            tabcontents.classList.remove("active-tab");
+        }
+      }
+    </script>
   </body>
 </html>
