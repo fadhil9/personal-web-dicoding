@@ -95,7 +95,7 @@ nav ul li a:hover::after{
     background-color: #fff;
     border-radius: 15px; 
 }
-.sub{
+.sub-title{
     font-size: 60px;
     font-weight: 600;
     color: #080808;
@@ -115,7 +115,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: violet;
+    background: #ff004f;
     position: absolute;
     left: 0;
     bottom: -8px;

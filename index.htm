@@ -37,7 +37,7 @@
             <img src="image/foto diri.jpeg" alt="" />
           </div>
           <div class="about-col-2">
-            <h1 class="sub">About Me</h1>
+            <h1 class="sub-title">About Me</h1>
             <p>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
               Excepturi saepe expedita eaque labore quibusdam ut ipsa soluta
@@ -52,26 +52,27 @@
               blanditiis laboriosam odio, rem aliquam accusamus ducimus quod, ad
               recusandae cupiditate quidem aut esse fugit dolore.F.
             </p>
+
             <div class="tab-titles">
-                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                <p class="tab-links" onclick="opentab('education')">Education</p>
+                <p class="tab-links active-link" onclick="opentab('ski')">Skills</p>
+                <p class="tab-links" onclick="opentab('exp')">Experience</p>
+                <p class="tab-links" onclick="opentab('edu')">Education</p>
             </div>
-            <div class="tab-contents active-tab" id="skills">
+            <div class="tab-contents active-tab" id="ski">
                 <ul>
                     <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
                     <li><span>Web Development</span><br>Web App Development</li>
                     <li><span>App Development</span><br>Building Android/ios</li>
                 </ul>
             </div>
-            <div class="tab-contents" id="experience">
+            <div class="tab-contents" id="exp">
                 <ul>
                     <li><span>2023-2023</span><br>freelance project PT.LALALA</li>
                     <li><span>2023-2024</span><br>Project college Web App Development</li>
                     <li><span>2019-2019</span><br>Internship mechanic PT.Mazda</li>
                 </ul>
             </div>
-            <div class="tab-contents" id="education">
+            <div class="tab-contents" id="edu">
                 <ul>
                     <li><span>2024-2024</span><br>Revou Tech academy Scholarship by revou x Kemdikbud</li>
                     <li><span>2023-2024</span><br>CampusCoder Scholarsip by Codepolitan X alibaba cloud</li>
@@ -85,17 +86,27 @@
     </div>
 
     <script>
-      var tablinks = document.getElementsByClassName("tab-links");
-      var tabcontents = document.getElementsByClassName("tab-contents");
-
-      function opentab(tabname){
-        for(tablinks of tablinks){
-            tablinks.classList.remove("active-link");
+      var tablinks = document.querySelectorAll(".tab-links");
+      var tabcontents = document.querySelectorAll(".tab-contents");
+    
+      function opentab(tabname) {
+        tablinks.forEach(function (link) {
+          link.classList.remove("active-link");
+        });
+    
+        tabcontents.forEach(function (content) {
+          content.classList.remove("active-tab");
+        });
+    
+        var selectedTab = document.getElementById(tabname);
+        if (selectedTab) {
+          selectedTab.classList.add("active-tab");
         }
-        for(tabcontents of tabcontents){
-            tabcontents.classList.remove("active-tab");
-        }
+    
+        event.currentTarget.classList.add("active-link");
       }
     </script>
+    
+
   </body>
 </html>
