@@ -54,59 +54,100 @@
             </p>
 
             <div class="tab-titles">
-                <p class="tab-links active-link" onclick="opentab('ski')">Skills</p>
-                <p class="tab-links" onclick="opentab('exp')">Experience</p>
-                <p class="tab-links" onclick="opentab('edu')">Education</p>
+              <p class="tab-links active-link" onclick="opentab('ski')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('exp')">Experience</p>
+              <p class="tab-links" onclick="opentab('edu')">Education</p>
             </div>
             <div class="tab-contents active-tab" id="ski">
-                <ul>
-                    <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                    <li><span>Web Development</span><br>Web App Development</li>
-                    <li><span>App Development</span><br>Building Android/ios</li>
-                </ul>
+              <ul>
+                <li><span>UI/UX</span><br />Designing Web/App interfaces</li>
+                <li><span>Web Development</span><br />Web App Development</li>
+                <li><span>App Development</span><br />Building Android/ios</li>
+              </ul>
             </div>
             <div class="tab-contents" id="exp">
-                <ul>
-                    <li><span>2023-2023</span><br>freelance project PT.LALALA</li>
-                    <li><span>2023-2024</span><br>Project college Web App Development</li>
-                    <li><span>2019-2019</span><br>Internship mechanic PT.Mazda</li>
-                </ul>
+              <ul>
+                <li><span>2023-2023</span><br />freelance project PT.LALALA</li>
+                <li>
+                  <span>2023-2024</span><br />Project college Web App
+                  Development
+                </li>
+                <li>
+                  <span>2019-2019</span><br />Internship mechanic PT.Mazda
+                </li>
+              </ul>
             </div>
             <div class="tab-contents" id="edu">
-                <ul>
-                    <li><span>2024-2024</span><br>Revou Tech academy Scholarship by revou x Kemdikbud</li>
-                    <li><span>2023-2024</span><br>CampusCoder Scholarsip by Codepolitan X alibaba cloud</li>
-                    <li><span>2021-2025</span><br>Graduate college technic infromatics Universitas Indraprasta </li>
-                </ul>
+              <ul>
+                <li>
+                  <span>2024-2024</span><br />Revou Tech academy Scholarship by
+                  revou x Kemdikbud
+                </li>
+                <li>
+                  <span>2023-2024</span><br />CampusCoder Scholarsip by
+                  Codepolitan X alibaba cloud
+                </li>
+                <li>
+                  <span>2021-2025</span><br />Graduate college technic
+                  infromatics Universitas Indraprasta
+                </li>
+              </ul>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About Me end -->
 
+    <!---------------------------Services ------------------------------------->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <h2>Web Design</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus maiores, sapiente culpa rem praesentium impedit consequuntur harum facere inventore unde.</p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <h2>Web Design</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus maiores, sapiente culpa rem praesentium impedit consequuntur harum facere inventore unde.</p>
+            <a href="#">Learn More</a>
+          </div>
+          <div>
+            <h2>Web Design</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus maiores, sapiente culpa rem praesentium impedit consequuntur harum facere inventore unde.</p>
+            <a href="#">Learn More</a>
           </div>
         </div>
       </div>
     </div>
 
+    <!---------------------------Services end------------------------------------->
+
     <script>
       var tablinks = document.querySelectorAll(".tab-links");
       var tabcontents = document.querySelectorAll(".tab-contents");
-    
+
       function opentab(tabname) {
         tablinks.forEach(function (link) {
           link.classList.remove("active-link");
         });
-    
+
         tabcontents.forEach(function (content) {
           content.classList.remove("active-tab");
         });
-    
+
         var selectedTab = document.getElementById(tabname);
         if (selectedTab) {
           selectedTab.classList.add("active-tab");
         }
-    
+
         event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
       }
     </script>
-    
-
   </body>
 </html>
