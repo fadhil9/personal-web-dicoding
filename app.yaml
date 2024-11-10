@@ -1,0 +1,9 @@
+runtime: python39 # Sesuaikan runtime jika menggunakan bahasa lain
+
+handlers:
+  - url: /
+    static_files: index.html
+    upload: index.html
+
+  - url: /static
+    static_dir: . # Melayani file statis dari direktori utama
